@@ -14,13 +14,25 @@ const JsUser = {
 //accessing the objects
 
 //console.log(JsUser);
-console.log(JsUser["name"]);
-console.log(JsUser[mySym]); //accessing the symbols
+// console.log(JsUser["name"]);
+// console.log(JsUser[mySym]); //accessing the symbols
 
 //change the values of object
 
-JsUser.email = "sachibote1127@gmail.com"
-Object.freeze(JsUser);
-JsUser.email = "sachibote1127@google.com"
-console.log(JsUser);
+// JsUser.email = "sachibote1127@gmail.com"
+//Object.freeze(JsUser);
+// JsUser.email = "sachibote1127@google.com"
+// console.log(JsUser);
 
+
+//FUNCTION ON OBJECT (before creating a function unfreeze it )
+JsUser.greeting = function(){
+    console.log("Hello JS User");
+}
+
+JsUser.greetingtwo = function(){
+    console.log(`Hello JS User, ${this.name}`);
+}
+
+ console.log(JsUser.greeting());
+ console.log(JsUser.greetingtwo());
