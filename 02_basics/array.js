@@ -30,12 +30,44 @@ const myArr2 = new Array(1, 2, 3, 4, 5);
 
 //SLICE AND SPLICE 
 
-console.log("A ", myArr);
+// console.log("A ", myArr);
 
-const  myn1 = myArr.slice(1,3);
-console.log(myn1)
-console.log("B ", myArr);
+// const  myn1 = myArr.slice(1,3);
+// console.log(myn1)
+// console.log("B ", myArr);
 
-const  myn2 = myArr.splice(1,3);
-console.log(myn2)
-console.log("C ", myArr);
+// const  myn2 = myArr.splice(1,3);
+// console.log(myn2)
+// console.log("C ", myArr);
+
+
+//ARRAY PART 2
+
+const marvel_heros = ["thor", "ironman", "spiderman"]
+const dc_heros = ["superman", "flash", "batman"]
+
+// marvel_heros.push(dc_heros);
+// console.log(marvel_heros);
+
+//CONCAT
+// const all_heros = marvel_heros.concat(dc_heros)
+// console.log(all_heros);
+
+//SPREAD
+// const all_new_heros = [...marvel_heros, ...dc_heros]
+// console.log(all_new_heros);
+
+//FLAT 
+// const num = [1, 2, 3, [4, 5, 6], 7, [6, 7, [4, 5]]]
+// const new_num = num.flat(Infinity)
+// console.log(new_num);
+
+console.log(Array.isArray("Sachi"))
+console.log(Array.from("Sachi"))
+console.log(Array.from({name: "Sachi"})) //new case 
+
+let score1 = 200
+let score3 = 300
+let score2 = 500
+
+console.log(Array.of(score1, score2, score3));
