@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Javascript Projects</h1>
+    <button id="start"> Start </button>
+    <button id="stop"> Stop </button>
+
+<script>
+    let intervalId;   // store interval id globally
+
+    const sayName = function(name){
+        console.log(name, Date.now());
+    }
+
+    document.getElementById('start').addEventListener('click', function(){
+        // Prevent multiple intervals running simultaneously
+        if(!intervalId){
+            intervalId = setInterval(sayName, 1000, "Hriday");
+        }
+    });
+
+    document.getElementById('stop').addEventListener('click', function(){
+        clearInterval(intervalId);
+        intervalId = null;
+    });
+</script>
+</body>
+</html>
